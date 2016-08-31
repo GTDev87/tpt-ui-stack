@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router';
 
@@ -9,13 +9,15 @@ import * as ui from '@teachers/tpt-ui';
 
 const { Grid, Row, Col, Menu, MenuItem, BaseButton } = ui;
 
-const RootComponent = ({ params: { pathName = 'Index' } }, { router }) => (
+import ButtonCounter from './ButtonCounter/ButtonCounter'
+
+const RootComponent = () => (
   <div className="App">
     <Grid className="App__grid">
       <Row>
         <Col xs={ 12 } >
           <p className="white App__headBanner">
-            Hello :)
+            Hello :
           </p>
         </Col>
       </Row>
@@ -23,15 +25,23 @@ const RootComponent = ({ params: { pathName = 'Index' } }, { router }) => (
         <Col xs={ 1 } />
         <Col xs={ 2 }>
           <div className="App__leftColumn">
-            <BaseButton className="App__leftColumnButton green cta outline LinkButton">Hello</BaseButton>
+            <ButtonCounter />
+            <ButtonCounter />
+            <ButtonCounter />
+            <ButtonCounter />
+            <ButtonCounter />
+            <ButtonCounter />
+            <ButtonCounter />
           </div>
         </Col>
-        <Col xs={ 8 }></Col>
+        <Col xs={ 8 }>
+          
+        </Col>
         <Col xs={ 1 } />
       </Row>
     </Grid>
   </div>
-);
+)
 
 RootComponent.propTypes = {
   params: React.PropTypes.object

@@ -9,21 +9,9 @@
     margin-bottom: 1em;
   }
 
-  &__leftColumn {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 
-    &Button {
-
-    }
-  }
 
   &__grid {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
   }
 
   &__body {
