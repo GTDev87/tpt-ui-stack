@@ -1,0 +1,32 @@
+.App {
+  overflow: hidden;
+
+  &__headBanner {
+    padding: 1.25em;
+    background: #28a1db;
+    color: white;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  &__leftColumn {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &Button {
+
+    }
+  }
+
+  &__grid {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__body {
+    flex: 1;
+  }
+}

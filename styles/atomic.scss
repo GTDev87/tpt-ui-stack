@@ -1,0 +1,251 @@
+@import "~sanitize.css/lib/sanitize.scss";
+@import "~@teachers/tpt-snacks/scss/index";
+
+/* TODO: We need to figure out how we are organizing atomic css */
+
+:root {
+  min-width: 75em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.25em 0;
+}
+
+h1 {
+  @include rem-fallback(font-size, 4);
+  font-weight: 700;
+}
+
+h2 {
+  @include rem-fallback(font-size, 2.29);
+  font-weight: 300;
+}
+
+h3 {
+  @include rem-fallback(font-size, 1.83);
+  font-weight: 300;
+}
+
+h4 {
+  @include rem-fallback(font-size, 1.5);
+  font-weight: 100;
+}
+
+a {
+  color: inherit;
+}
+
+strong {
+  font-weight: 700;
+}
+
+b {
+  font-weight: 600;
+}
+
+section {
+  @include rem-fallback(font-size, 1.143);
+}
+
+.special {
+  @extend b;
+  text-transform: uppercase;
+}
+
+.light {
+  font-weight: 100;
+}
+
+.sm-btn-txt {
+  @extend .light;
+  @include rem-fallback(font-size, 0.857);
+}
+
+.table-label-1 {
+  @extend .light;
+  @include rem-fallback(font-size, 0.857);
+  text-transform: uppercase;
+}
+
+.table-label-2 {
+  @extend strong;
+  @include rem-fallback(font-size, 0.71);
+}
+
+input {
+  border: 2px solid $color-base-gray-l;
+  border-radius: 0.25em;
+}
+
+input:focus {
+  border-color: $color-base-green;
+}
+
+input:invalid {
+  border-color: $color-base-red;
+}
+
+input:disabled {
+  background: $color-base-gray-l;
+  color: $color-base-gray;
+  border: none;
+}
+
+button,
+input {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 400;
+}
+
+button:disabled {
+  cursor: auto;
+}
+
+.stretch {
+  width: 100%;
+}
+
+.outline {
+  border: 1px solid;
+  font-weight: 400;
+}
+
+.border {
+  border: 2px solid;
+}
+
+.dark-gray {
+  color: #333;
+  border-color: #666;
+}
+
+.gray {
+  color: $color-base-gray;
+}
+
+.green {
+  color: $color-base-green;
+}
+
+.blue {
+  color: $color-base-blue;
+}
+
+.yellow {
+  color: $color-base-yellow;
+}
+
+.teal {
+  color: $color-base-teal;
+}
+
+.red {
+  color: $color-base-red;
+}
+
+.white {
+  color: $color-base-white;
+}
+
+.green.cta {
+  color: $color-base-white;
+  background: $color-base-green;
+}
+
+.outline {
+  background: none;
+}
+
+.outline.cta {
+  color: $color-base-green;
+  background: none;
+}
+
+.green.outline:hover {
+  color: $color-base-text-gray;
+  background: none;
+}
+
+.green.outline.cta:hover {
+  color: $color-base-green-l;
+  background: none;
+}
+
+.green.outline.cta:active {
+  color: $color-base-green-d;
+  background: none;
+}
+
+.green.cta:hover {
+  background: $color-base-green-d;
+}
+
+.green.cta:active {
+  background: $color-base-green-d;
+}
+
+.neutral.outlined {
+  background: none;
+}
+
+.neutral {
+  color: $color-base-white;
+  border: 2px solid $color-base-white;
+  background: $color-base-white;
+}
+
+.neutral.outlined {
+  background: none;
+}
+
+.subhead-1,
+.subhead-2 {
+  margin: 1em 0;
+}
+
+.subhead-1 {
+  @include rem-fallback(font-size, 1.125);
+  font-weight: 600;
+}
+
+.subhead-2 {
+  @include rem-fallback(font-size, 1.125);
+  font-weight: 300;
+}
+
+.caption {
+  @include rem-fallback(font-size, 0.75);
+}
+
+.is-hidden {
+  display: none;
+}
+
+.text-align--right {
+  &.Button{
+    text-align: right;
+  }
+}
+
+.flx-stretch {
+  flex: 1;
+}
+
+.nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.row--center,
+.column--center {
+  align-self: center;
+}
